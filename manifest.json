@@ -19,7 +19,7 @@
     "content_scripts": [
         {
             "matches": ["http://*/*", "https://*/*"],
-            "js": ["js/jquery-3.4.1.min.js", "js/sign.js"],
+            "js": ["js/jquery-3.4.1.min.js", "js/content.js"],
             "run_at": "document_start"
         }
     ],
@@ -27,17 +27,17 @@
         "contextMenus",
         "http://*/*",
         "https://*/*",
+        "storage",
         "cookies",
         "notifications",
         "webRequest",
         "webRequestBlocking"
     ],
-    "web_accessible_resources": ["js/jquery-3.4.1.min.js", "js/sign.js"],
-    "homepage_url": "255",
+    "web_accessible_resources": ["js/jquery-3.4.1.min.js", "js/inject.js"],
+    "homepage_url": "https://www.baidu.com/",
     "options_ui": {
         "page": "options.html",
         "chrome_style": true
     },
-    "default_locale": "zh_CN",
     "devtools_page": "devtools.html"
 }
