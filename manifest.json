@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "鱼吧签到",
+    "version": "1.0.0",
+    "description": "小天使鱼吧自动签到",
+    "icons": {
+        "16": "img/icon.jpg",
+        "48": "img/icon.jpg",
+        "128": "img/icon.jpg"
+    },
+    "background": {
+        "page": "background.html"
+    },
+    "browser_action": {
+        "default_icon": "img/icon.jpg",
+        "default_title": "今天你签到了吗"
+    }
+}
