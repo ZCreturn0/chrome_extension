@@ -16,7 +16,25 @@ chrome.notifications.create(null, {
 
 // 获取 cookies
 chrome.cookies.getAll({
-    url: 'https://www.douyu.com/'
+    // url: 'https://www.douyu.com/'
+    url: 'https://tieba.baidu.com/'
 },(cookies) => {
-    console.log(cookies);
+    // console.log(cookies);
+    let cookieStr = [];
+    for(let cookie of cookies){
+        console.log(`${cookie.name} = ${cookie.value}`);
+        cookieStr.push(`${cookie.name}=${cookie.value}`);
+    }
+    let xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            console.log(JSON.parse(xhr.response));
+        }
+    }
+
+    xhr.open('get', 'https://tieba.baidu.com/hottopic/browse/topicList', true);
+    xhr.setRequestHeader('Host', 'tieba.baidu.com');
+    xhr.setRequestHeader('Referer', 'https://tieba.baidu.com/index.html');
+    xhr.setRequestHeader('Cookie', cookieStr.join(';'));
+    xhr.send(null);
 });

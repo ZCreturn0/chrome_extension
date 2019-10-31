@@ -1,2 +1,3 @@
 // 注入页面的 js
-$(".nav-text-content").css('color', "red");
+// 百度
+// $(".nav-text-content").css('color', "red");
