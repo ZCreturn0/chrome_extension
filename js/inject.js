@@ -1,3 +1,5 @@
 // 注入页面的 js
-// 百度
-// $(".nav-text-content").css('color', "red");
+window.onload = () => {
+    console.log(document.getElementsByClassName('LuckyStartEnter')[0])
+    document.getElementsByClassName('LuckyStartEnter')[0].remove();
+}
