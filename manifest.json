@@ -19,9 +19,9 @@
     },
     "content_scripts": [
         {
-            "matches": ["*://*/*"],
+            "matches": ["*://douyu.com/*"],
             "js": ["js/jquery-3.4.1.min.js", "js/content.js"],
-            "run_at": "document_start"
+            "run_at": "document_idle"
         }
     ],
     "permissions": [
