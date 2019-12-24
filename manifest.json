@@ -9,6 +9,7 @@
         "128": "img/icon.png"
     },
     "background": {
+        "persistent": true,
         "page": "background.html"
     },
     "browser_action": {
@@ -18,15 +19,14 @@
     },
     "content_scripts": [
         {
-            "matches": ["http://*/*", "https://*/*"],
+            "matches": ["*://*/*"],
             "js": ["js/jquery-3.4.1.min.js", "js/content.js"],
             "run_at": "document_start"
         }
     ],
     "permissions": [
         "contextMenus",
-        "http://*/*",
-        "https://*/*",
+        "*://*/*",
         "storage",
         "cookies",
         "notifications",
